@@ -2,9 +2,15 @@ import styled, { css } from "styled-components"
 import { Space, H1, H7, Button } from "comp"
 import ArrowRightIcon from "src/icons/arrow-right"
 import useLang from "src/hooks/useLang"
+import { essayFormLink } from "src/config"
+
 
 const EssaySection = () => {
 	const { t } = useLang()
+	const handleOpenEssayBtn = () => {
+		window.location.href = essayFormLink
+	}
+
 	return (
 		<Container>
 			<InnerContainer>
@@ -14,7 +20,7 @@ const EssaySection = () => {
 				<Space h="2rem" />
 			</Section>
 			<SecondSection center>
-				<Button type="default" width="10em">
+				<Button type="default" width="10em" onClick={handleOpenEssayBtn}>
 					{t("open")}
 					<ArrowRightIcon size="1.5rem" />
 				</Button>
