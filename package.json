@@ -1,0 +1,40 @@
+{
+  "name": "fanos-client",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "source": "index.html",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "buffer": "^6.0.3",
+    "eslint": "^8.20.0",
+    "eslint-plugin-react": "^7.32.1",
+    "parcel": "^2.6.2",
+    "parcel-reporter-static-files-copy": "^1.5.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "axios": "^1.2.0",
+    "gapi-script": "^1.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-google-login": "^5.2.2",
+    "react-loading-skeleton": "^3.1.0",
+    "react-markdown": "^8.0.3",
+    "react-router-dom": "^6.3.0",
+    "react-spinners": "^0.13.8",
+    "react-toastify": "^9.1.1",
+    "recoil": "^0.7.5",
+    "styled-components": "^5.3.5"
+  },
+  "alias": {
+    "comp": "/components",
+    "src": "/"
+  }
+}
