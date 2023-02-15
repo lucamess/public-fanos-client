@@ -16,8 +16,8 @@ export const colors = {
 
 export const tagList = ["Scholarships", "SAT", "Extracurriculars", "Essay", "Commonapp"]
 export const axiosInstance = axios.create({
-	// baseURL: "https://public-fanos-server.vercel.app/",
-	baseURL: "http://localhost:5000/",
+	baseURL: "https://public-fanos-server.vercel.app/",
+	// baseURL: "http://localhost:5000/",
 })
 export const errorTranslations = {
 	"TEAM_ONLY": "This action is allowed for team members only",
