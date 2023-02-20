@@ -38,7 +38,7 @@ const Header = () => {
 			<HeaderTitle onClick={goto("/")}>Fanos</HeaderTitle>
 			
 			<Hamburger onClick={() => setMenuOpen(true)} />
-			<MenuList menuOpen={menuOpen} >
+			<MenuList menuOpen={menuOpen}>
 				<Closeburger onClick={() => setMenuOpen(false)} />
 				{translateMenuLabel(menuList, t).map(item => (
 					<MenuItem
@@ -113,6 +113,7 @@ const MenuList = styled.div`
 	display: flex;
 	align-items: center;
 	gap: 1.6rem;
+	z-index: 2;
 
 	@media screen and (max-width: 64em) {
 		position: fixed;
@@ -128,7 +129,6 @@ const MenuList = styled.div`
 		transition: visibility 0.25s, opacity 0.25s linear;
 		visibility: ${prop => prop.menuOpen ? "visible" : "hidden"};
 		opacity: ${prop => prop.menuOpen ? 1 : 0}
-		z-index: 2;
 	}
 `
 

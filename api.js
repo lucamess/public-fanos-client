@@ -26,7 +26,7 @@ const getItemById = (url) => (id) => {
 	return axiosInstance.post(url, {
 		id
 	})
-		.then(sleep(500))
+		.then(sleep(100))
 		.then(handleResponse)
 }
 

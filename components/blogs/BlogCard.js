@@ -1,15 +1,23 @@
+import { useState } from "react"
 import styled, { useTheme, css } from "styled-components"
 import Skeleton from "react-loading-skeleton"
 import { Text, H6, Space } from "comp"
 import { dateToHumanText } from "src/utils"
 
 
-const BlogCard = ({ username, title, date, imgSrc, onClick, rigid }) => {
-	const imgSrcUrl = new URL(imgSrc, import.meta.url)
+const BlogCard = ({ username, title, date, imgSrc, onClick, rigid, flex }) => {
 	const { secondary, text0, text2 } = useTheme()
+	const [imgLoaded, setImgLoaded] = useState(false)
+
+	const imgSrcUrl = new URL(imgSrc, import.meta.url)
+	const handleImgLoad = () => {
+		setImgLoaded(true)
+	}
+
 	return (
-		<Container onClick={onClick} rigid={rigid}>
-			<Image src={imgSrcUrl} />
+		<Container onClick={onClick} rigid={rigid} flex={flex}>
+			{ imgLoaded == false && <Skeleton height={150} /> }
+			<Image src={imgSrcUrl} visible={imgLoaded} onLoad={handleImgLoad} />
 			<TextContainer>
 				<Text color={secondary} bold>{username}</Text>
 				<H6 color={text0}>{title}</H6>
@@ -43,7 +51,7 @@ const BlogCardSkeletonContainer = styled.div`
 	width: 100%;
 
 	${props => props.rigid && css`
-		width: 320px !important;
+		min-width: 320px;
 	`}
 `
 
@@ -60,15 +68,13 @@ const Container = styled.div`
 
 	${props => props.rigid && css`
 		width: 320px;
+		max-width: 320px;
 	`}
 
-	@media screen and (max-width: 64em) {
+	${props => props.flex && css`
+		width: 100%;
 		min-width: 100%;
-
-		${props => props.rigid && css`
-			width: 320px;
-		`}
-	}
+	`}
 `
 
 const TextContainer = styled.div`
@@ -80,6 +86,11 @@ const Image = styled.img`
 	max-height: 200px;
 	border-top-left-radius: 8px;
 	border-top-right-radius: 8px;
+	display: none;
+
+	${props => props.visible && css`
+		display: block;
+	`}
 `
 
 export default BlogCard

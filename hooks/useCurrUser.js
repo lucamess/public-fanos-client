@@ -1,7 +1,7 @@
 import { useRecoilState } from "recoil"
 import { currUserState } from "src/states"
 import { useGoogleLogin } from "react-google-login"
-import { googleClientId } from "src/hooks/useGoogleLoginInit"
+import { googleClientId } from "src/config"
 import { registerUser } from "src/api"
 
 

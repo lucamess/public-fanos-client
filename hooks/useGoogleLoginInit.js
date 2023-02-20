@@ -1,7 +1,6 @@
 import { useEffect } from "react"
 import { gapi } from "gapi-script"
-
-export const googleClientId = "877555200368-jkbkpjhrpptp0i3qihgnipaifc5ikse4.apps.googleusercontent.com"
+import { googleClientId } from "src/config"
 
 const useGoogleLoginInit = () => {
 	useEffect(() => {

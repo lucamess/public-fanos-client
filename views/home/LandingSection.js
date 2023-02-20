@@ -9,7 +9,7 @@ const LandingSection = () => {
 		<Container>
 			<InnerContainer>
 			<Section>
-				<Space h="4rem" mh="0" />
+				<Space h="4rem" mh="0rem" />
 				<H05 bold>
 					{t("landing-text")}
 					&nbsp;

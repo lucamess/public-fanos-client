@@ -14,6 +14,9 @@ export const colors = {
 	lightDarker: "#89CBE0",
 }
 
+
+export const googleClientId = "877555200368-jkbkpjhrpptp0i3qihgnipaifc5ikse4.apps.googleusercontent.com"
+
 export const essayFormLink = "https://forms.gle/tmE616AGAr67E8Wx7"
 export const socialLinks = {
 	telegram: "https://t.me/fanoscollegeapp",

@@ -2,7 +2,7 @@ const enText = {
 	"submit": "Submit",
 	"open": "Open",
 	"read-more": "Read More",
-	"more-results": "More Results",
+	// "more-results": "More Results",
 	"join": "Join",
 	"ask-new-question": "Ask new question",
 	"ask": "Ask",
@@ -36,7 +36,7 @@ const enText = {
 	"team": "Team",
 
 	// Single Blog Page
-	"related-articles": "Related Articles",
+	"related-articles": "Popular Articles",
 
 
 	// About Us Page

@@ -2,7 +2,7 @@ const amText = {
 	"submit": "አስገባ",
 	"open": "ክፈት",
 	"read-more": "ተጨማሪ ክፈት",
-	"more-results": "ተጨማሪ",
+	// "more-results": "ተጨማሪ",
 	"join": "ተቀላቀል",
 	"ask-new-question": "አዲስ ጥያቄ ይጠይቁ",
 	"ask": "ይጠይቁ",

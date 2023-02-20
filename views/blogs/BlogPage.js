@@ -44,6 +44,7 @@ const BlogPage = () => {
 			<BlogListContainer>
 				{blogList?.items.map(item => (
 					<BlogCard
+						flex
 						key={item._id}
 						username={item.user.name}
 						title={transContent(item.title)}
