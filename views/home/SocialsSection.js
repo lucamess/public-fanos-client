@@ -6,11 +6,15 @@ import TwitterIcon from "src/icons/twitter"
 import LinkedinIcon from "src/icons/linkedin"
 import InstagramIcon from "src/icons/instagram"
 import useLang from "src/hooks/useLang"
+import { socialLinks } from "src/config"
 
 
 const SocialsSection = () => {
 	const socialImgSrc = new URL("/assets/fanos-tg-discussion2.jpg", import.meta.url)
 	const { t } = useLang()
+	const handleSocialBtn = (name) => () => {
+		window.location.href = socialLinks[name]
+	}
 
 	return (
 		<Container>
@@ -27,7 +31,7 @@ const SocialsSection = () => {
 				<Row>
 					<H6 color="white">{t("socials-main-prompt")}</H6>
 					<FlexGrow />
-					<Button size="small">
+					<Button size="small" onClick={handleSocialBtn("telegramGroup")}>
 						<TelegramIcon size="1.5rem" />
 						Join
 					</Button>
@@ -35,23 +39,23 @@ const SocialsSection = () => {
 			</Section>
 			<Section second>
 				<Space h="1rem" mh="0" />
-				<SocialButton>
+				<SocialButton onClick={handleSocialBtn("telegram")}>
 					<TelegramIcon size="1.5rem" />
 					{t("join-telegram")}
 				</SocialButton>
-				<SocialButton>
+				<SocialButton onClick={handleSocialBtn("youtube")}>
 					<YoutubeIcon size="1.5rem" />
 					{t("join-youtube")}
 				</SocialButton>
-				<SocialButton>
+				<SocialButton onClick={handleSocialBtn("twitter")}>
 					<TwitterIcon size="1.5rem" />
 					{t("join-twitter")}
 				</SocialButton>
-				<SocialButton>
+				<SocialButton onClick={handleSocialBtn("linkedin")}>
 					<LinkedinIcon size="1.5rem" />
 					{t("join-linkedin")}
 				</SocialButton>
-				<SocialButton>
+				<SocialButton onClick={handleSocialBtn("instagram")}>
 					<InstagramIcon size="1.5rem" />
 					{t("join-instagram")}
 				</SocialButton>

@@ -20,14 +20,6 @@ const BlogCard = ({ username, title, date, imgSrc, onClick, rigid }) => {
 }
 
 
-const BlogCardSkeleton = ({ rigid }) => (
-	<BlogCardSkeletonContainer rigid={rigid}>
-		<Skeleton height={150} />
-		<Skeleton width="30%" />
-		<Skeleton height={30} />
-		<Space h="1rem" />
-	</BlogCardSkeletonContainer>
-)
 
 export const BlogListSkeleton = ({ count = 4, rigid }) => (
 	<>
@@ -38,11 +30,20 @@ export const BlogListSkeleton = ({ count = 4, rigid }) => (
 	</>
 )
 
+const BlogCardSkeleton = ({ rigid }) => (
+	<BlogCardSkeletonContainer rigid={rigid}>
+		<Skeleton height={150} />
+		<Skeleton width="30%" />
+		<Skeleton height={30} />
+		<Space h="1rem" />
+	</BlogCardSkeletonContainer>
+)
+
 const BlogCardSkeletonContainer = styled.div`
 	width: 100%;
 
 	${props => props.rigid && css`
-		width: 320px;
+		width: 320px !important;
 	`}
 `
 

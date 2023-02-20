@@ -49,7 +49,7 @@ const Header = () => {
 						{item.label}
 					</MenuItem>
 				))}
-				<LangButton lang={lang} setLang={setLang} />
+				<LangButton lang={lang} setLang={setLang} onClick={() => setMenuOpen(false)} />
 				<LoginButton signIn={signIn} currUser={currUser} />
 			</MenuList>
 		</HeaderContainer>
@@ -128,6 +128,7 @@ const MenuList = styled.div`
 		transition: visibility 0.25s, opacity 0.25s linear;
 		visibility: ${prop => prop.menuOpen ? "visible" : "hidden"};
 		opacity: ${prop => prop.menuOpen ? 1 : 0}
+		z-index: 2;
 	}
 `
 

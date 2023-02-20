@@ -49,7 +49,7 @@ const App = () => {
 	return (
 		<RecoilRoot>
 		<ThemeProvider theme={colors}>
-		<BrowserRouter>
+		<HashRouter>
 			<ToastContainer />
 			<GlobalStyle />
 			<Header />
@@ -65,7 +65,7 @@ const App = () => {
 				<Route path="/admin" element={<AccountListPage />} />
 				<Route path="/singleblog/:id" element={<SingleBlogPage />} />
 			</Routes>
-		</BrowserRouter>
+		</HashRouter>
 		</ThemeProvider>
 		</RecoilRoot>
 	)

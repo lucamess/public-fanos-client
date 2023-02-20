@@ -7,12 +7,15 @@ const langPrompts = {
 	en: "English"
 }
 
-const LangButton = ({ lang, setLang }) => {
+const LangButton = ({ lang, setLang, onClick = () => null }) => {
 	const otherLang = lang == "en" ? "am" : "en"
 	const prompt = langPrompts[otherLang]
 	const isMobile = useMediaQuery("(max-width: 64em)")
 
-	const handleClick = () => setLang(otherLang)
+	const handleClick = () => {
+		setLang(otherLang)
+		onClick()
+	}
 	return (
 		<Button type={isMobile ? "outline" : "thin-outline"} size="small" onClick={handleClick}>
 			<LanguageIcon />

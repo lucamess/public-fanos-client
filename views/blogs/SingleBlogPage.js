@@ -63,7 +63,7 @@ const SingleBlogPage = () => {
 				<BlogList>
 					{
 						loading ? <SideBarSkeleton /> :
-							relatedBlogList.map(item => (
+							relatedBlogList.slice(0, 4).map(item => (
 								<BlogCard
 									key={item._id}
 									username={item.user?.name}

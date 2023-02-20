@@ -3,7 +3,7 @@ import { H0, H05, Subtitle, Space, H7 } from "comp"
 import useLang from "src/hooks/useLang"
 
 const LandingSection = () => {
-	const landingImgSrc = new URL("/assets/habesha-graduation.jpeg", import.meta.url)
+	const landingImgSrc = new URL("/assets/habesha-graduation2.jpeg", import.meta.url)
 	const { t } = useLang()
 	return (
 		<Container>

@@ -15,6 +15,14 @@ export const colors = {
 }
 
 export const essayFormLink = "https://forms.gle/tmE616AGAr67E8Wx7"
+export const socialLinks = {
+	telegram: "https://t.me/fanoscollegeapp",
+	instagram: "https://instagram.com/fanoscollegeapp2022",
+	linkedin: "https://www.linkedin.com/company/fanos-college-application-assistance/",
+	youtube: "https://m.youtube.com/@fanoscollegeapplicationass7588",
+	twitter: "https://twitter.com/CollegeFanos",
+	telegramGroup: "https://t.me/joinchat/E7mlIVWQUM2BDfLcfshbow",
+}
 export const tagList = ["Scholarships", "SAT", "Extracurriculars", "Essay", "Commonapp"]
 export const axiosInstance = axios.create({
 	baseURL: "https://public-fanos-server.vercel.app/",
