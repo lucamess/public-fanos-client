@@ -31,8 +31,8 @@ const QuestionsPage = () => {
 	const handleAskButtonClick = () => {
 		navigate("/askquestion")
 	}
-	const handleQuestionClick = question => () => {
-		navigate("/singleqa/" + question._id)
+	const handleQuestionClick = id => () => {
+		navigate("/singleqa/" + id)
 	}
 
 	useEffect(() => {
@@ -66,7 +66,7 @@ const QuestionsPage = () => {
 							content={transContent(item.content)}
 							nOfComments={item.nOfComments}
 							key={item._id}
-							onClick={handleQuestionClick(item)}
+							onClick={handleQuestionClick(item._id)}
 						/>
 						<Space h="1rem" />
 						</>

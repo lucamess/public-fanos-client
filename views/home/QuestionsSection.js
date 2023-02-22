@@ -23,9 +23,10 @@ const QuestionsSection = () => {
 		loadNewResults({ searchText: "", })
 	}, [])
 
-	const handleQuestionClick = question => () => {
-		navigate("/singleqa/", { state: { question }})
+	const handleQuestionClick = id => () => {
+		navigate("/singleqa/" + id)
 	}
+
 	const handleReadMoreClick = () => { navigate("/questions") }
 
 	return (
@@ -55,7 +56,7 @@ const QuestionsSection = () => {
 								date={item.date}
 								username={item.user.name}
 								content={transContent(item.content)}
-								onClick={handleQuestionClick(item)}
+								onClick={handleQuestionClick(item._id)}
 							/>
 							<Space h="1rem" />
 							</>

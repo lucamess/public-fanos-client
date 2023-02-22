@@ -5,6 +5,7 @@ import useItemListApi from "src/hooks/useItemListApi"
 import { getBlogByText } from "src/api"
 import { handleServerError } from "src/utils"
 import useLang from "src/hooks/useLang"
+import { useNavigate } from "react-router-dom"
 
 
 const BlogsSection = () => {
@@ -14,6 +15,11 @@ const BlogsSection = () => {
 		loadingState
 	} = useItemListApi(getBlogByText, handleServerError)
 	const { t, transContent } = useLang()
+	const navigate = useNavigate()
+
+	const handleBlogClick = id => () => {
+		navigate("/singleblog/" + id)
+	}
 
 	useEffect(() => {
 		loadNewResults({ searchText: "" })
@@ -39,6 +45,7 @@ const BlogsSection = () => {
 								title={transContent(item.title)}
 								date={item.date}
 								imgSrc={item.imgSrc}
+								onClick={handleBlogClick(item._id)}
 							/>
 						))
 					)
