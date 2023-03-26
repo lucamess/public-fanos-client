@@ -14,7 +14,7 @@ import QuestionsPage from "src/views/questions/QuestionsPage"
 import SingleQAPage from "src/views/questions/SingleQAPage"
 import AskQuestionPage from "src/views/questions/AskQuestionPage"
 import AccountListPage from "src/views/admin/AccountListPage"
-import { Header } from "comp"
+import { Header, UnderDevPage } from "comp"
 import { colors } from "./config"
 import { RecoilRoot } from "recoil"
 import useGoogleLoginInit from "src/hooks/useGoogleLoginInit"
@@ -57,13 +57,16 @@ const App = () => {
 				<Route path="/" element={<HomePage />} exact />
 				<Route path="/login" element={<LoginPage />} />
 				<Route path="/team" element={<TeamPage />} />
-				<Route path="/blogs" element={<BlogPage />} />
+				{/* <Route path="/blogs" element={<BlogPage />} /> */}
 				<Route path="/addblog" element={<AddBlogPage />} />
-				<Route path="/questions" element={<QuestionsPage />} />
+				{/* <Route path="/questions" element={<QuestionsPage />} /> */}
 				<Route path="/singleqa/:id" element={<SingleQAPage />} />
 				<Route path="/askquestion" element={<AskQuestionPage />} />
 				<Route path="/admin" element={<AccountListPage />} />
 				<Route path="/singleblog/:id" element={<SingleBlogPage />} />
+
+				<Route path="/blogs" element={<UnderDevPage />} />
+				<Route path="/questions" element={<UnderDevPage />} />
 			</Routes>
 		</HashRouter>
 		</ThemeProvider>

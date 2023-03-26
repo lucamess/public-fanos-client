@@ -16,11 +16,13 @@ import SearchBar from "./general/SearchBar"
 import TagList from "./general/TagList"
 import { ContentInput, ContentInputMultiple } from "./general/ContentInput"
 import ValidationMessage from "./general/ValidationMessage"
+import UnderDevPage from "./general/UnderDevPage"
 
 export { Button, SearchBar, TagList, ValidationMessage }
 export { H0, H05, H1, H2, H3, H4, H5, H6, H7, Subtitle, Text, Subtext }
 export { Row, FlexGrow, Space, Input, InputMultiple }
 export { ContentInput, ContentInputMultiple }
+export { UnderDevPage }
 
 
 
