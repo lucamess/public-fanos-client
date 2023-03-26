@@ -17,7 +17,7 @@ const LangButton = ({ lang, setLang, onClick = () => null }) => {
 		onClick()
 	}
 	return (
-		<Button type={isMobile ? "outline" : "thin-outline"} size="small" onClick={handleClick}>
+		<Button type={isMobile ? "outline" : "outline-thin"} size="small" onClick={handleClick}>
 			<LanguageIcon />
 			{prompt}
 		</Button>

@@ -44,7 +44,7 @@ const enText = {
 	"about-fanos": "Fanos College Application Assistance is a non-profit online community of Ethiopian high school and college students primarily based on the Telegram social media platform created to act as a means to share relevant college application advice, information, and resources for free to those who do not have much access as it is difficult for local high school students in Ethiopia to get their hands on such resources once they complete their secondary education.",
 
 	"meet-the-founder": "Meet Daniel",
-	"founder-name": "Daniel Mekuriya",
+	"founder-name": "Daniel Mekuriaw",
 	"founder-title": "Founder and Manager",
 	"founder-description": "Daniel is currently a junior undergraduate student at Yale University studying Computer Science and Statistics & Data Science.",
 	"founder-quote": "When I started Fanos with Kaleb Areda in December 2019, it was merely to share what we learned about the college application process since we had gone through it a short while before that.",

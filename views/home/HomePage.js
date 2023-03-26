@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { FooterSection, Space } from "comp"
 import LandingSection from "./LandingSection"
+import MentorSection from "./MentorSection"
 import EssaySection from "./EssaySection"
 import QuestionsSection from "./QuestionsSection"
 import BlogsSection from "./BlogsSection"
@@ -17,6 +18,8 @@ const HomePage = () => {
 		<Container>
 			<LandingSection />
 			<Space h="3rem" />
+
+			<MentorSection />
 
 			<EssaySection />
 			<Space h="3rem" />

@@ -52,7 +52,7 @@ const ButtonContainer = styled.div`
 		}
 	`}
 
-	${props => props.type == "thin-outline" && css`
+	${props => props.type == "outline-thin" && css`
 		color: var(--primary);
 		padding: 0.5rem 0.7rem;
 		border: 1px solid #ddd;
@@ -73,7 +73,7 @@ const ButtonContainer = styled.div`
 
 `
 
-const Button = ({ className, children, style, onClick, type = "default", size = "default", width, active = true, }) => {
+const Button = ({ className, children, style, onClick, type = "default", size = "default", width, active = true }) => {
 	return (
 		<ButtonContainer
 			className={className}
