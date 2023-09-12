@@ -1,4 +1,4 @@
-import { BrowserRouter, HashRouter, Routes, Route } from "react-router-dom"
+import { HashRouter, Routes, Route } from "react-router-dom"
 import { ThemeProvider, createGlobalStyle } from "styled-components"
 import "src/main.css"
 import "react-toastify/dist/ReactToastify.css"
@@ -57,16 +57,16 @@ const App = () => {
 				<Route path="/" element={<HomePage />} exact />
 				<Route path="/login" element={<LoginPage />} />
 				<Route path="/team" element={<TeamPage />} />
-				{/* <Route path="/blogs" element={<BlogPage />} /> */}
+				<Route path="/blogs" element={<BlogPage />} />
 				<Route path="/addblog" element={<AddBlogPage />} />
-				{/* <Route path="/questions" element={<QuestionsPage />} /> */}
+				<Route path="/questions" element={<QuestionsPage />} />
 				<Route path="/singleqa/:id" element={<SingleQAPage />} />
 				<Route path="/askquestion" element={<AskQuestionPage />} />
 				<Route path="/admin" element={<AccountListPage />} />
 				<Route path="/singleblog/:id" element={<SingleBlogPage />} />
 
-				<Route path="/blogs" element={<UnderDevPage />} />
-				<Route path="/questions" element={<UnderDevPage />} />
+				{/* <Route path="/blogs" element={<UnderDevPage />} /> */}
+				{/* <Route path="/questions" element={<UnderDevPage />} /> */}
 			</Routes>
 		</HashRouter>
 		</ThemeProvider>

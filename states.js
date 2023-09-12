@@ -10,6 +10,7 @@ export const currUserState = atom({
 
 /**
  * NO USE FOR THE BELOW STATES
+ * FEEL FREE TO REMOVE THEM
  *  **/
 
 export const blogListState = atom({
